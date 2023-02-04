@@ -1,16 +1,17 @@
 #$ TITLE: jessearmand racing rates
 #$ FIRMWARE_VERSION: 4.3
+#$ FIRMWARE_VERSION: 4.4
 #$ CATEGORY: RATES
 #$ STATUS: COMMUNITY
-#$ KEYWORDS: racing
+#$ KEYWORDS: racing, rates, actual
 #$ AUTHOR: Jesse Armand
-#$ DESCRIPTION: Standard racing rates for my typical configuration
+#$ DESCRIPTION: Standard racing rates for my typical configuration, higher rates on yaw as stick movement is less sensitive
 #$ INCLUDE: presets/4.3/rates/defaults.txt
 
 set rates_type = ACTUAL
 set roll_rc_rate = 15
 set pitch_rc_rate = 15
-set yaw_rc_rate = 15
+set yaw_rc_rate = 20
 set roll_srate = 60
 set pitch_srate = 60
-set yaw_srate = 60
+set yaw_srate = 75
