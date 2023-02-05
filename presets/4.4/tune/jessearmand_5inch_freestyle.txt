@@ -46,22 +46,44 @@ set vbat_sag_compensation = 100
 
 set pidsum_limit = 1000
 set pidsum_limit_yaw = 1000
-set p_pitch = 54
-set i_pitch = 96
-set d_pitch = 52
-set f_pitch = 143
-set p_roll = 51
-set i_roll = 92
-set d_roll = 46
-set f_roll = 138
-set p_yaw = 51
-set i_yaw = 92
-set f_yaw = 138
-set d_min_roll = 34
-set d_min_pitch = 39
 set d_max_advance = 0
-set simplified_master_multiplier = 115
+
+#$ OPTION_GROUP BEGIN: PIDs (select one)
+    #$ OPTION BEGIN (UNCHECKED): Overall higher PIDs
+    set p_pitch = 54
+    set i_pitch = 96
+    set d_pitch = 52
+    set f_pitch = 143
+    set p_roll = 51
+    set i_roll = 92
+    set d_roll = 46
+    set f_roll = 138
+    set p_yaw = 51
+    set i_yaw = 92
+    set f_yaw = 138
+    set d_min_roll = 34
+    set d_min_pitch = 39
+    set simplified_master_multiplier = 115
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): Higher tracking, lower damping
+    set p_pitch = 54
+    set i_pitch = 96
+    set d_pitch = 40
+    set p_roll = 51
+    set i_roll = 92
+    set d_roll = 35
+    set p_yaw = 51
+    set i_yaw = 92
+    set simplified_pi_gain = 115
+    set simplified_dmax_gain = 50
+    #$ OPTION END
+#$ OPTION_GROUP END
 
 #$ OPTION BEGIN (UNCHECKED): Dynamic Idle at minimum 2500 rpm
 set dyn_idle_min_rpm = 25
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Lower Dynamic Idle P gain (high power-to-weight ratio)
+set dyn_idle_p_gain = 40
 #$ OPTION END
