@@ -1,0 +1,36 @@
+#$ TITLE: Freestyle 5-inch 500Hz
+#$ FIRMWARE_VERSION: 4.3
+#$ FIRMWARE_VERSION: 4.4
+#$ CATEGORY: TUNE
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: 500Hz, Race500, ghost, rc, rx , link, ghost, IRC, GHST, immersionRC, immersion, Freestyle
+#$ AUTHOR: Jesse Armand
+#$ DESCRIPTION:
+#$ DESCRIPTION: This tune can be applied up from 166Hz to 500Hz Race mode on IRC Ghost, but also minimizing delays from RC smoothing.
+#$ DESCRIPTION: Filter settings are based on a normal build with RPM filtering
+#$ DESCRIPTION: Slightly higher PID values from the defaults
+#$ DESCRIPTION:
+#$ FORCE_OPTIONS_REVIEW: TRUE
+
+# Set to Defaults
+
+#$ INCLUDE: presets/4.3/rc_link/defaults.txt
+#$ INCLUDE: presets/4.3/filters/defaults.txt
+#$ INCLUDE: presets/4.3/tune/defaults.txt
+
+# Defaults end
+
+#$ OPTION BEGIN (UNCHECKED): RC link settings for up to 500Hz
+#$ INCLUDE: presets/4.3/rc_link/generic/500hz_freestyle.txt
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Filtering for Normal builds with RPM filtering
+#$ INCLUDE: presets/4.3/filters/basic_rpm_normal.txt
+#$ OPTION END
+
+# RC Smoothing
+set rc_smoothing_auto_factor = 20
+set rc_smoothing_auto_factor_throttle = 20
+
+# PID Tune
+set simplified_master_multiplier = 115
