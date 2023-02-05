@@ -18,7 +18,13 @@
 # Defaults end
 
 #$ OPTION BEGIN (UNCHECKED): RC link settings for up to 500Hz
+
+# Set to Defaults
+
 #$ INCLUDE: presets/4.3/rc_link/defaults.txt
+
+# Defaults end
+
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 65
 set feedforward_jitter_factor = 7
