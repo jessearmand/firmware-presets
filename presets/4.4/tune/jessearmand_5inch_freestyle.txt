@@ -1,5 +1,4 @@
 #$ TITLE: Freestyle 5-inch 500Hz
-#$ FIRMWARE_VERSION: 4.3
 #$ FIRMWARE_VERSION: 4.4
 #$ CATEGORY: TUNE
 #$ STATUS: COMMUNITY
@@ -14,14 +13,15 @@
 
 # Set to Defaults
 
-#$ INCLUDE: presets/4.3/rc_link/defaults.txt
-#$ INCLUDE: presets/4.3/filters/defaults.txt
-#$ INCLUDE: presets/4.3/tune/defaults.txt
+#$ INCLUDE: presets/4.4/tune/defaults_tune_filters.txt
 
 # Defaults end
 
 #$ OPTION BEGIN (UNCHECKED): RC link settings for up to 500Hz
-#$ INCLUDE: presets/4.3/rc_link/generic/500hz_freestyle.txt
+#$ INCLUDE: presets/4.3/rc_link/defaults.txt
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 7
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): Filtering for Normal builds with RPM filtering
