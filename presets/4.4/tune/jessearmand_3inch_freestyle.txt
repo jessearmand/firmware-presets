@@ -1,8 +1,8 @@
-#$ TITLE: Freestyle 5-inch 500Hz
+#$ TITLE: Freestyle 3-inch 500Hz
 #$ FIRMWARE_VERSION: 4.4
 #$ CATEGORY: TUNE
 #$ STATUS: COMMUNITY
-#$ KEYWORDS: 5-inch, 5", 5in, 500Hz, Race500, ghost, rc, rx , link, ghost, IRC, GHST, immersionRC, immersion, Freestyle
+#$ KEYWORDS: 3-inch, 3", 3in, 500Hz, Race500, ghost, rc, rx , link, ghost, IRC, GHST, immersionRC, immersion, Freestyle
 #$ AUTHOR: Jesse Armand
 #$ DESCRIPTION:
 #$ DESCRIPTION: This tune can be applied up from 166Hz to 500Hz Race mode on IRC Ghost, but also minimizing delays from RC smoothing.
@@ -80,8 +80,8 @@ set d_max_advance = 0
     #$ OPTION END
 #$ OPTION_GROUP END
 
-#$ OPTION BEGIN (UNCHECKED): Dynamic Idle at minimum 2500 rpm
-set dyn_idle_min_rpm = 25
+#$ OPTION BEGIN (UNCHECKED): Dynamic Idle at minimum 3000 rpm
+set dyn_idle_min_rpm = 30
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): Lower Dynamic Idle P gain (high power-to-weight ratio)
